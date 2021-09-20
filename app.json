@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "rn-finances",
+    "slug": "rn-finances",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "rn-finances"
+}
