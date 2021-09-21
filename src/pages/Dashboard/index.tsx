@@ -8,8 +8,10 @@ import {
   User,
   UserGreeting,
   UserName,
-  Icon
+  Icon,
+  HighlighCards
 } from './styles';
+import {HighlighCard} from "../../components/HighlighCard";
 
 export default function Dashboard(){
   return(
@@ -28,6 +30,13 @@ export default function Dashboard(){
           <Icon name="power"/>
         </UserWrapper>
       </Header>
+
+      <HighlighCards>
+        <HighlighCard />
+        <HighlighCard />
+        <HighlighCard />
+      </HighlighCards>
+
     </Container>
   );
 }
