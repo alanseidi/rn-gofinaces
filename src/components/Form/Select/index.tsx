@@ -7,11 +7,12 @@ import {
 
 interface Props {
   title: string;
+  onPress: () => void;
 }
 
-export default function Select({title} : Props){
+export default function Select({title, onPress} : Props){
   return(
-    <Container >
+    <Container onPress={onPress}>
       <Title>{title}</Title>
       <Icon name="chevron-down"/>
     </Container>
