@@ -13,6 +13,7 @@ import {
   Transactions,
   Title,
   TransactionList,
+  LogoutButton,
 } from './styles';
 import {HighlighCard} from "../../components/HighlighCard";
 import TransactionCard, {TransactionCardProps} from "../../components/TransactionCard";
@@ -81,7 +82,12 @@ export default function Dashboard(){
               <UserName>Alan Seidi</UserName>
             </User>
           </UserInfo>
-          <Icon name="power"/>
+          <LogoutButton
+            onPress={() => {}}
+          >
+            <Icon name="power"/>
+          </LogoutButton>
+
         </UserWrapper>
       </Header>
 

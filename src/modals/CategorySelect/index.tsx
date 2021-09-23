@@ -5,7 +5,7 @@ import Button from "../../components/Form/Button";
 import {categories} from "../../utils/categories";
 
 import {
-  Container,
+  ContainerGesture,
   Header,
   Title,
 } from "../../global/styles/global";
@@ -38,9 +38,8 @@ export default function CategorySelect({
     setCategory(cat);
   }
 
-
   return(
-    <Container>
+    <ContainerGesture>
       <Header>
         <Title>Categoria</Title>
       </Header>
@@ -67,6 +66,6 @@ export default function CategorySelect({
           onPress={closeSelectCategory}
         />
       </Footer>
-    </Container>
+    </ContainerGesture>
   );
 }

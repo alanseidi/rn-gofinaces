@@ -4,6 +4,7 @@ import {Feather} from "@expo/vector-icons";
 import {RFPercentage, RFValue} from "react-native-responsive-fontsize";
 import {getBottomSpace, getStatusBarHeight} from "react-native-iphone-x-helper";
 import {TransactionCardListProps} from "./index";
+import {BorderlessButton} from "react-native-gesture-handler";
 export const Container = styled.View`
   flex: 1;
   background-color: ${({theme}) => theme.colors.background};
@@ -58,6 +59,8 @@ export const Icon = styled(Feather)`
   color: ${({theme}) => theme.colors.alert};
   font-size: ${RFValue(24)}px;
 `;
+
+export const LogoutButton = styled(BorderlessButton)``;
 
 export const HighlighCards = styled.ScrollView.attrs({
   horizontal: true,
