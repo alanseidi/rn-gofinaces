@@ -3,6 +3,10 @@ import {ActivityIndicator} from "react-native";
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {useFocusEffect} from "@react-navigation/native";
 import {
+  LoadContainer,
+} from "../../global/styles/global";
+
+import {
   Container,
   Header,
   UserWrapper,
@@ -17,11 +21,10 @@ import {
   Title,
   TransactionList,
   LogoutButton,
-  LoadContainer,
 } from './styles';
 import {HighlighCard} from "../../components/HighlighCard";
 import TransactionCard, {TransactionCardProps} from "../../components/TransactionCard";
-import theme from "../../global/styles/theme";
+import {useTheme} from "styled-components";
 
 export interface TransactionCardListProps extends TransactionCardProps{
   id: string;
@@ -40,6 +43,7 @@ export default function Dashboard(){
   const [isLoading, setIsLoading] = useState(true);
   const [transactions, setTransactions] = useState<TransactionCardListProps[]>([]);
   const [highlightData, setHighlightData] = useState<HighlightData>({} as HighlightData);
+  const theme = useTheme();
 
   function getLastTransactionDate(
     collection: TransactionCardProps[],
