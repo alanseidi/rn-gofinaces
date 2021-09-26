@@ -28,6 +28,7 @@ import Button from "../../components/Form/Button";
 import TransactionTypeButton from "../../components/Form/TransactionTypeButton";
 import Select from "../../components/Form/Select";
 import CategorySelect from "../../modals/CategorySelect";
+import {useAuth} from "../../hooks/auth";
 
 interface FormData{
   name: string;
@@ -54,7 +55,8 @@ export default function Register(){
     key: 'category',
     name: 'Categoria'
   });
-  const navigation = useNavigation<NavigationProps>()
+  const navigation = useNavigation<NavigationProps>();
+  const {user} = useAuth();
 
   const {
     control,
@@ -76,7 +78,7 @@ export default function Register(){
   }
 
   async function handleSubmitForm(form: FormData){
-    const dataKey = "@gofinances:transactions";
+    const dataKey = `@gofinances:transactions_user:${user.id}`;
 
     if(!transactionType){
       return Alert.alert("Selecione o tipo da transação");
